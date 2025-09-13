@@ -1,4 +1,4 @@
-var minisrv_service_file = true;
+var wtvrsvc_service_file = true;
 
 headers = `200 OK
 Connection: Keep-Alive
@@ -7,7 +7,7 @@ Expires: Wed, 09 Oct 1991 22:00:00 GMT
 Content-Type: text/plain`;
 
 const crypto = require("crypto");
-var wtvMe = new WTVMessenger(minisrv_config, SessionStore);
+var wtvMe = new WTVMessenger(wtvrsvc_config, SessionStore);
 //const https = require("https");
 
 const algorithm = "aes-256-ctr";
@@ -52,7 +52,7 @@ if (request_headers.request.split("?")[1].substring(0, 3) != "ct=") {
     request_is_async = true; // Make us async
 
     async function auth() {
-        var response = await fetch(`https://${session_data.getSessionData("messenger_server")}/rdr/pprdr.asp`);
+        var response = await fetch(`https://ctas.login.ugnet.xyz/rdr/pprdr.asp`);
         var passporturls = response.headers
             .get("passporturls")
             .split("DALogin=")[1];

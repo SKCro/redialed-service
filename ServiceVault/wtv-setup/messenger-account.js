@@ -1,4 +1,4 @@
-var minisrv_service_file = true;
+var wtvrsvc_service_file = true;
 
 headers = `200 OK
 Connection: Keep-Alive
@@ -121,13 +121,6 @@ bgcolor=#444444 text=#ffdd33 cursor=#cc9933
 TYPE="password" ASCIIONLY
 SIZE="16"
 MAXLENGTH="20">
-<br><br>
-<p>Server
-<input type="hidden" autosubmit="onLeave">
-<select name="server">
-<option value="ms.msgrsvcs.ctsrv.xyz">CrossTalk
-</option><option value="ds.escargot.nina.chat">Escargot
-</option></select>
 </table>
 <br><br>
 <TR>
